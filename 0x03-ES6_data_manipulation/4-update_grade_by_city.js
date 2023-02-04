@@ -4,10 +4,9 @@ export default function updateStudentGradeByCity(StuList, city, newGrades) {
   }
 
   const filteredArr = StuList.filter((obj) => obj.location === city);
-  filteredArr.map((stu) =>
-  {
+  filteredArr.map((stu) => {
     const student = newGrades.find((Grade) => Grade.studentId === stu.id);
-    student !== undefined ? stu.grade  = student.grade : stu.grade = 'N/A';
+    student !== undefined ? stu.grade = student.grade : stu.grade = 'N/A';
     return stu;
   });
   return filteredArr;
