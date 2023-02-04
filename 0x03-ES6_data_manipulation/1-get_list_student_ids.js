@@ -1,6 +1,6 @@
 export default function getListStudentIds(arr) {
   if (!Array.isArray(arr)) {
-      return [];
+    return [];
   }
   const newArray = arr.map((obj) => obj.id);
   return newArray;
