@@ -6,5 +6,5 @@ export default function groceriesList() {
         'Rice': 1,
         'Banana': 5
       }
-    return new Map(object.entries(obj));
+    return new Map(Object.entries(obj));
 }
