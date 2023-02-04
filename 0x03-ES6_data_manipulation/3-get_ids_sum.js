@@ -1,3 +1,3 @@
-export default function getStudentIdsSum (arr) {
-    arr.reduce((accumulator, obj) => obj.id + accumulator, 0,);
+export default function getStudentIdsSum(arr) {
+  return arr.reduce((accumulator, obj) => obj.id + accumulator, 0);
 }
