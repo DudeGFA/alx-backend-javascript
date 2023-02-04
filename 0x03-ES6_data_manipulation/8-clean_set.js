@@ -8,5 +8,5 @@ export default function cleanSet(aset, startString) {
         newArr.push(item.slice(startString.length))
     }
   }
-  return newset.join("-")
+  return newArr.join("-")
 }
