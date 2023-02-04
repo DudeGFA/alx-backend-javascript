@@ -1,4 +1,12 @@
 export default function cleanSet(aset, startString) {
-    const newset = new Set()
-    aset.forEach((item) => item.startsWith(startString) && newset.add(item));
+    const newset = ''
+  if (startString === '' || !isinstance(startString, String)) {
+    return newset
+  }
+  for (const item of aset) {
+    if (item.startsWith(startString)) {
+        newset += item.slice(startString.length)
+    }
+  }
+  return newset
 }
