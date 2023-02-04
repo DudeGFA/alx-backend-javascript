@@ -1,3 +1,5 @@
 export default function hasValuesFromArray(aset, Arr) {
-  return aset.has(...Arr);
+  for (value of Arr)
+    if (!aset.has(value))
+      return false;
 }
