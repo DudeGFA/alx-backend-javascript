@@ -24,7 +24,7 @@ function countStudents(dbPath) {
       // console.log(key)
       // console.log(stuCourse[key].length)
       if (key) {
-        console.log(`Number of students: ${key}: ${stuCourse[key].length}. List: ${stuCourse[key].join(', ')}`);
+        console.log(`Number of students in ${key}: ${stuCourse[key].length}. List: ${stuCourse[key].join(', ')}`);
       }
     }
   } catch (error) {
