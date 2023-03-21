@@ -5,7 +5,7 @@ function countStudents(dbPath) {
   let length = 0;
   try {
     const data = fs.readFileSync(dbPath, 'utf-8');
-    const db = data.toString().split('\r\n');
+    const db = data.toString().split('\n');
     // console.log(db)
     for (let i = 1; i < db.length; i += 1) {
       if (db[i]) {
