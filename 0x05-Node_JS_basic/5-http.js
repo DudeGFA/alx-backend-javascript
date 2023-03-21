@@ -13,6 +13,7 @@ function countStudents(dbPath) {
       if (error) {
         reject(Error('Cannot load the database'));
       } else {
+        let result = '';
         const db = data.toString().split('\n');
         // console.log(db)
         for (let i = 1; i < db.length; i += 1) {
@@ -27,15 +28,15 @@ function countStudents(dbPath) {
             }
           }
         }
-        console.log(`Number of students: ${length.toString()}`);
+        result += `Number of students: ${length.toString()}\n`;
         for (const key in stuCourse) {
           // console.log(key)
           // console.log(stuCourse[key].length)
           if (key) {
-            console.log(`Number of students in ${key}: ${stuCourse[key].length}. List: ${stuCourse[key].join(', ')}`);
+            result += `Number of students in ${key}: ${stuCourse[key].length}. List: ${stuCourse[key].join(', ')}\n`;
           }
         }
-        resolve(data);
+        resolve(result);
       }
     });
   });
