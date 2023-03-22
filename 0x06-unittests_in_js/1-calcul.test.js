@@ -20,7 +20,7 @@ describe("calculateNumer()", function() {
         assert.strictEqual(val, 'Error');
     });
     it('testing DIVIDE -ve numbers', function() {
-        const val = calculateNumber(-4.4, -2.1);
-        assert.strictEqual(val, 2);
+        const val = calculateNumber('DIVIDE', -4.4, -2.1);
+        assert.strictEqual(val, 2.0);
     });
 });
