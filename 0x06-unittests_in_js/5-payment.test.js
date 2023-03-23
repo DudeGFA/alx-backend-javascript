@@ -3,8 +3,8 @@ const sinon = require("sinon");
 const sendPaymentRequestToApi = require("./5-payment");
 const expect = require("chai").expect;
 
-describe("sendPaymentRequestToApir", function() {
-    beforeEach("Set up spy to use for eache test", function() {
+describe("sendPaymentRequestToApi", function() {
+    beforeEach("Set up spy to use for each test", function() {
         sinon.spy(console, "log");
     });
     afterEach("restore spy after each test", function() {
@@ -12,7 +12,7 @@ describe("sendPaymentRequestToApir", function() {
     });
     it("check that console.log is called with the right arg", function() {
         sendPaymentRequestToApi(100, 20);
-        expect(console.log.withArgsa("The total is: 120").calledOnce).to.be.true;
+        expect(console.log.withArgs("The total is: 120").calledOnce).to.be.true;
     });
     it("check that console.log is called with the right arg", function() {
         sendPaymentRequestToApi(10, 10);
