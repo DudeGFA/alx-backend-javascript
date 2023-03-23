@@ -28,9 +28,9 @@ describe("Cart page", function() {
             done();
         });
     });
-    it("check correct content for incorrect url", function(done) {
+    it("check correct content for correct url", function(done) {
         request.get("http://localhost:7865/cart/12", function(err, res, body) {
-            expect(body).to.contain("Payment methods for cart 12");
+            expect(body).to.equal("Payment methods for cart 12");
             done();
         });
     });
@@ -72,7 +72,7 @@ describe("Available_payments page", function() {
 describe("Login", function() {
     it("check correct status code for request that's sent ptoperly", function(done) {
         const opt = {
-            url: "http://localhost:/7865/login",
+            url: "http://localhost:7865/login",
             json: true,
             body: {
                 userName: 'JOE'
@@ -85,7 +85,7 @@ describe("Login", function() {
     });
     it("check correct content for request that's sent ptoperly", function(done) {
         const opt = {
-            url: "http://localhost:/7865/login",
+            url: "http://localhost:7865/login",
             json: true,
             body: {
                 userName: 'JOE'
@@ -102,7 +102,7 @@ describe("Login", function() {
     });
     it("check correct status code for request that's not sent ptoperly", function(done) {
         const opt = {
-            url: "http://localhost:/7865/login",
+            url: "http://localhost:7865/login",
             json: true,
             body: {
                 wrong: 'JOE'
